@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Login - StudyVerse AI</title>
     <!-- Use relative paths -->
     <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/pages/auth.css">
+<link rel="stylesheet" href="assets/css/pages/auth.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
