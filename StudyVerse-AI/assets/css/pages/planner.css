@@ -1,0 +1,307 @@
+/* Planner Layout Basics */
+.planner-header {
+    margin-bottom: 2rem;
+}
+
+/* Stats Overview Top Row */
+.stats-overview {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stat-card h3 {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.score-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.deadlines-container {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.deadlines-container h3 {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.deadline-items {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.deadline-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.deadline-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-main);
+    padding: 0.5rem;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 1.25rem;
+    min-width: 60px;
+}
+
+.deadline-time small {
+    font-size: 0.55rem;
+    letter-spacing: 0.5px;
+}
+
+.deadline-time.danger { color: #EF4444; background: #FEF2F2; }
+.deadline-time.warning { color: #F59E0B; background: #FFFBEB; }
+
+.deadline-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.deadline-details .subject {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+.deadline-details .title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* Planner Main Grid */
+.planner-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+/* Calendar View */
+.calendar-section {
+    padding: 1.5rem;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.calendar-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.calendar-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.current-month {
+    font-weight: 600;
+    margin: 0 1rem;
+    font-size: 1.05rem;
+}
+
+.calendar-grid-view {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background: var(--border-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.weekday {
+    background: var(--bg-main);
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.day {
+    background: white;
+    min-height: 100px;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.day.prev-month {
+    background: #F8FAFC;
+    color: var(--text-muted);
+}
+
+.day.today {
+    background: var(--primary-light);
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.event-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.event-tag.bg-blue { background: #DBEAFE; color: #1D4ED8; }
+.event-tag.bg-green { background: #D1FAE5; color: #047857; }
+
+/* Right Sidebar: Tasks */
+.planner-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card-header.border-bottom {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.task-filters {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--bg-main);
+    padding: 0.25rem;
+    border-radius: var(--radius-md);
+    width: 100%;
+}
+
+.task-filters .filter-btn {
+    flex: 1;
+    padding: 0.4rem;
+    text-align: center;
+}
+
+.task-filters .filter-btn.active {
+    background: white;
+    box-shadow: var(--shadow-sm);
+    color: var(--text-main);
+    border-radius: var(--radius-sm);
+}
+
+.task-list-detailed {
+    display: flex;
+    flex-direction: column;
+}
+
+.detailed-task {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.detailed-task:last-child { border-bottom: none; }
+
+.detailed-task input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-top: 0.2rem;
+    accent-color: var(--primary);
+}
+
+.task-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.task-subject {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.priority {
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.65rem;
+}
+
+.priority.high { background: #FEE2E2; color: #B91C1C; }
+.priority.medium { background: #FEF3C7; color: #D97706; }
+
+.task-name {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+.detailed-task input:checked + .task-info .task-name {
+    text-decoration: line-through;
+    color: var(--text-muted);
+}
+
+.task-time {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.mt-1 { margin-top: 1rem; }
+
+/* AI Tip Card */
+.ai-tip-card {
+    background: linear-gradient(to right, #EEF2FF, white);
+    border-left: 4px solid var(--primary);
+}
+
+.ai-tip-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
